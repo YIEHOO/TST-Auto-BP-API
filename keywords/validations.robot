@@ -12,6 +12,6 @@ Validate Schema
 
 Validate Response Time
     [Arguments]    ${startTime}    ${endTime}    ${expectedResponseTime}=${globalExpectedResponseTime}
-    Log To Console    Validating the reponse time!
+    Log To Console    Validating the response time!
     ${responseTime}    Subtract Date From Date    ${endTime}    ${startTime}
     Run Keyword And Warn On Failure    Should Be True    ${responseTime} < ${expectedResponseTime}
